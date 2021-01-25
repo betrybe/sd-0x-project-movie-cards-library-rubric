@@ -38,7 +38,7 @@ jobs:
         uses: betrybe/jest-evaluator-action@v7
         with:
           repository-test-name: 'betrybe/sd-0x-block12-project-movie-cards-library-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'atualizacao_dos_testes'
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
         with:
