@@ -1,18 +1,15 @@
 on:
   workflow_dispatch:
     inputs:
-      dispatch_token:
-        description: 'Token that authorize the dispatch'
-        required: false
       head_sha:
         description: 'Head commit SHA that dispatched the workflow'
-        required: false
+        required: true
       pr_author_username:
         description: 'Pull Request author username'
-        required: false
+        required: true
       pr_number:
         description: 'Pull Request number that dispatched the workflow'
-        required: false
+        required: true
 
 jobs:
   evaluator:
