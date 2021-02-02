@@ -25,14 +25,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: betrybe/eslint-linter-action
-          ref: 2
+          ref: v2
           token: ${{ secrets.GIT_HUB_PAT }}
           path: .github/actions/eslint-evaluator
       - name: Checkout Blocked Files Checkout action
         uses: actions/checkout@v2
         with:
           repository: betrybe/blocked-files-checkout-action
-          ref: 2
+          ref: v2
           token: ${{ secrets.GIT_HUB_PAT }}
           path: .github/actions/blocked-files-checkout
       - name: Setup NodeJS
