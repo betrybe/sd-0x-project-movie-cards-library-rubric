@@ -13,7 +13,6 @@ on:
       pr_number:
         description: 'Pull Request number that dispatched the workflow'
         required: true
-
 jobs:
   evaluator:
     runs-on: self-hosted
@@ -21,7 +20,7 @@ jobs:
     steps:
       - name: Check out project repository
         uses: actions/checkout@v2
-      - name: Check out ESLint evaluator
+      - name: Check out ESlint evaluator
         uses: actions/checkout@v2
         with:
           repository: betrybe/eslint-linter-action
