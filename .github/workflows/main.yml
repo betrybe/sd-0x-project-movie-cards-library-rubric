@@ -13,17 +13,18 @@ on:
       pr_number:
         description: 'Pull Request number that dispatched the workflow'
         required: true
-jobs:
-  evaluator:
-    runs-on: self-hosted
-    name: Evaluator Job
-    steps:
-      - name: Check out project repository
-        uses: actions/checkout@v2
-      - name: Check out ESlint evaluator
-        uses: actions/checkout@v2
-        with:
-          repository: betrybe/eslint-linter-action
-          ref: v2
-          token: ${{ secrets.GIT_HUB_PAT }}
-          path: .github/actions/eslint-evaluator
+
+  jobs:
+    evaluator:
+      runs-on: self-hosted
+      name: Evaluator Job
+      steps:
+        - name: Check out project repository
+          uses: actions/checkout@v2
+        - name: Check out ESlint evaluator
+          uses: actions/checkout@v2
+          with:
+            repository: betrybe/eslint-linter-action
+            ref: v2
+            token: ${{ secrets.GIT_HUB_PAT }}
+            path: .github/actions/eslint-evaluator
