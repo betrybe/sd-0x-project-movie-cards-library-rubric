@@ -17,13 +17,7 @@ on:
 jobs:
   evaluator:
     runs-on: self-hosted
+    name: Evaluator Job
     steps:
       - name: Check out project repository
         uses: actions/checkout@v2
-      - name: Check out ESLint evaluator
-        uses: actions/checkout@v2
-        with:
-          repository: betrybe/eslint-linter-action
-          ref: learn-869
-          token: ${{ secrets.GIT_HUB_PAT }}
-          path: .github/actions/eslint-evaluator
