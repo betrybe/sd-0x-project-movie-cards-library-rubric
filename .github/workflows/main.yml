@@ -6,7 +6,7 @@ on:
         required: true
       head_sha:
         description: 'Head commit SHA that dispatched the workflow'
-        required: true
+        required: false
       pr_author_username:
         description: 'Pull Request author username'
         required: true
@@ -21,10 +21,3 @@ jobs:
     steps:
       - name: Check out project repository
         uses: actions/checkout@v2
-      - name: Check out ESlint evaluator
-        uses: actions/checkout@v2
-        with:
-          repository: betrybe/eslint-linter-action
-          ref: v2
-          token: ${{ secrets.GIT_HUB_PAT }}
-          path: .github/actions/eslint-evaluator
