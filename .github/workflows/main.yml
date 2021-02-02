@@ -17,7 +17,7 @@ on:
   jobs:
     evaluator:
       runs-on: self-hosted
-      name: Evaluator Job
+      name: Evaluator Jobs
       steps:
         - name: Check out project repository
           uses: actions/checkout@v2
